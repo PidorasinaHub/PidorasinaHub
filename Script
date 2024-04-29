@@ -150,7 +150,27 @@ Section:NewToggle("Получить силу древних Русов", "Наж
     if state then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/sinret/rbxscript.com-scripts-reuploads-/main/WalkOnWalls", true))()
     else
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/sinret/rbxscript.com-scripts-reuploads-/main/WalkOnWalls", false))()
+       --This script was made for you to be able to kill/"reset" your character if resetting your character is not an option, or has 
+--been taken out. This script will also work as a suicide command.
+ 
+-- Function to handle player's death
+local function forceResetAction()
+    local player = game.Players.LocalPlayer
+    if player.Character and player.Character:FindFirstChild("Humanoid") then
+        player.Character.Humanoid.Health = 0
+    end
+end
+ 
+-- Bind the function to a keyboard input (e.g., press 'K' to kill)
+game:GetService("UserInputService").InputBegan:Connect(function(input, isProcessed)
+    if isProcessed then
+        return
+    end
+ 
+    if input.KeyCode == Enum.KeyCode.K then
+        forceResetAction()
+    end
+end)
     end
 end)
 
@@ -188,4 +208,20 @@ local Section = Tab:NewSection("Da hood Script")
 
 Section:NewButton("BladeBall", "BladeBallGui", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/SpaceYes/Lua/Main/DaHood.Lua'))()
+end)
+
+local Tab = Window:NewTab("Evade")
+
+local Section = Tab:NewSection("Evade Script")
+
+Section:NewButton("BladeBall", "BladeBallGui", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/stuffman0001/CanHub/main/Code"))()
+end)
+
+local Tab = Window:NewTab("Evade")
+
+local Section = Tab:NewSection("Evade Script")
+
+Section:NewButton("BladeBall", "BladeBallGui", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/stuffman0001/CanHub/main/Code"))()
 end)
