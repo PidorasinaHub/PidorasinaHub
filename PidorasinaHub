@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "💥Universal Script💥",
+   Name = "💥Pidorasina Hub💥",
    LoadingTitle = "Pidorasina Hub",
    LoadingSubtitle = "by chiter_new228",
    ConfigurationSaving = {
@@ -30,8 +30,8 @@ local MainTab = Window:CreateTab("🏠Home🏠", nil) -- Title, Image
 local MainSection = MainTab:CreateSection("💥Universal Scripts💥")
 
 Rayfield:Notify({
-   Title = "Hello!",
-   Content = "PidorasinaHub Loaded",
+   Title = "Hello!👋",
+   Content = "PidorasinaHub Loaded.Enjoy the game💜 ",
    Duration = 5,
    Image = nil,
    Actions = { -- Notification Buttons
@@ -290,7 +290,7 @@ local Button = MainTab:CreateButton({
 local Button = MainTab:CreateButton({
    Name = "NormalJump",
    Callback = function()
-   game.Players.LocalPlayer.Character.Humanoid.JumpPower = 20
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = 45
    end,
 })
 
@@ -337,3 +337,38 @@ local Button = ScriptTab:CreateButton({
    loadstring(game:HttpGet('https://raw.githubusercontent.com/Jimmper/Robloxscripts/main/obf_ijyV31z27684kpX3UZru9jXcm6UcjCbQyA8el5xmOsYPJ1wwwym70XBni5NRkAAu.lua'))()
    end,
 })
+
+local MainSection = ScriptTab:CreateSection("💲Da Hood💲"))
+
+local Button = ScriptTab:CreateButton({
+   Name = "Da Hood Gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/spacexrandom/Lua/main/DaHood", true))()
+   end,
+})
+
+local MainSection = ScriptTab:CreateSection("🪠Skibidi Toilet Tower Defense🪠")
+
+local Button = ScriptTab:CreateButton({
+   Name = "Skibidi Toilet Tower Defense GUI",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/pdhvLJsE"))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Skibidi Toilet Tower Defense SCAM",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/JustWarriorGG/TTDhub/main/mainhub.lua'))()
+   end,
+})
+
+local MainSection = ScriptTab:CreateSection("🔪MM2🔪")
+
+local Button = ScriptTab:CreateButton({
+   Name = "MM2 Gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Drifter0507/scripts/main/mm2", true))()
+   end,
+})
+
