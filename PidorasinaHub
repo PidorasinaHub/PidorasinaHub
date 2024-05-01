@@ -18,7 +18,7 @@ local Window = Rayfield:CreateWindow({
    KeySettings = {
       Title = "PidorasinaHub| Key",
       Subtitle = "You can buy the key from the developer in telegram @PidorasinaHub",
-      Note = "Pidorasina Hub cares about your security and privacy.",
+      Note = "It's safe and fast",
       FileName = "PidorasinaHubKey", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
@@ -73,9 +73,70 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
+   Name = "Super Spin",
+   Callback = function()
+   game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end)
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power,500,power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+   end,
+})
+
+local Button = MainTab:CreateButton({
    Name = "WalkOnWalls",
    Callback = function()
   loadstring(game:HttpGet("https://raw.githubusercontent.com/sinret/rbxscript.com-scripts-reuploads-/main/WalkOnWalls", true))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Double Jumps",
+   Callback = function()
+  local character = script.Parent
+local humanoid = character:WaitForChild("Humanoid")
+ 
+local uis = game:GetService("UserInputService")
+ 
+local canDoubleJump = false
+local hasLanded = true
+ 
+ 
+humanoid.StateChanged:Connect(function(previous, new)
+    
+    if new == Enum.HumanoidStateType.Jumping and hasLanded then
+        
+        if not canDoubleJump then canDoubleJump = true; hasLanded = false end
+        
+        
+    elseif new == Enum.HumanoidStateType.Landed then
+        
+        canDoubleJump = false
+        hasLanded = true
+    end
+end)
+ 
+uis.InputBegan:Connect(function(input, processed)
+    
+    if processed then return end
+    
+    if input.KeyCode == Enum.KeyCode.Space then
+        
+        if canDoubleJump then
+            
+            
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            
+            canDoubleJump = false
+        end
+    end
+end)
    end,
 })
 
@@ -337,3 +398,68 @@ local Button = ScriptTab:CreateButton({
    loadstring(game:HttpGet('https://raw.githubusercontent.com/Jimmper/Robloxscripts/main/obf_ijyV31z27684kpX3UZru9jXcm6UcjCbQyA8el5xmOsYPJ1wwwym70XBni5NRkAAu.lua'))()
    end,
 })
+
+local MainSection = ScriptTab:CreateSection("💸Da Hood💸")
+
+local Button = ScriptTab:CreateButton({
+   Name = "Evade Gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/spacexrandom/Lua/main/DaHood", true))()
+   end,
+})
+
+local MainSection = ScriptTab:CreateSection("🚽Toilet Tower Deffens🚽")
+
+local Button = ScriptTab:CreateButton({
+   Name = "Toilet Gui 1",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/ou1z/Roblox-Scripts/master/InputRecorder.lua'))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Toilet Gui 2",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/diepedyt/Lala/main/TTD.lua'))()
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Toilet Gui Trade Scam",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/n3rp1k/TTD-TRADE-SCAM/main/DUPE%20MENU"))()
+   end,
+})
+
+
+local ScriptTab = Window:CreateTab("🌌Teleports🌌", nil) -- Title, Image
+local MainSection = ScriptTab:CreateSection("🏕️Лагерь рп🏕️")
+
+local Button = ScriptTab:CreateButton({
+   Name = "Admin Base(Фонтан)",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3685.1025390625, 226.9795379638672, 1105.111572265625)
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Admin Base(Дом)",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5035.2724609375, 263.0082092285156, 8.204002380371094)
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Spawn(Фонтан)",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(471.9824523925781, 20.87854766845703, 393.9947204589844)
+   end,
+})
+
+local Button = ScriptTab:CreateButton({
+   Name = "Spawn(Милицейский участок)",
+   Callback = function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(71.3542251586914, 13.149996757507324, 820.6920166015625)
+   end,
+})
+
