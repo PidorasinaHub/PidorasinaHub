@@ -290,7 +290,7 @@ local Button = MainTab:CreateButton({
 local Button = MainTab:CreateButton({
    Name = "NormalJump",
    Callback = function()
-   game.Players.LocalPlayer.Character.Humanoid.JumpPower = 20
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = 40
    end,
 })
 
