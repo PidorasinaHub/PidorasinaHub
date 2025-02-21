@@ -436,16 +436,9 @@ local ScriptTab = Window:CreateTab("🌌Teleports🌌", nil) -- Title, Image
 local MainSection = ScriptTab:CreateSection("🏕️Лагерь рп🏕️")
 
 local Button = ScriptTab:CreateButton({
-   Name = "Admin Base(Фонтан)",
+   Name = "Admin Base",
    Callback = function()
-   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3685.1025390625, 226.9795379638672, 1105.111572265625)
-   end,
-})
-
-local Button = ScriptTab:CreateButton({
-   Name = "Admin Base(Дом)",
-   Callback = function()
-   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5035.2724609375, 263.0082092285156, 8.204002380371094)
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1309.360107421875, 222.3321533203125, 523.4453735351562)
    end,
 })
 
